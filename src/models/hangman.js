@@ -5,8 +5,8 @@ const hangmanSchema = new Schema({
   name: String,
   timeLeft: { type: Date, default: Date.now },
   word: String,
-  lettersUsed: [String],
-  isWin: Boolean,
+  lettersUsed: { type: [String], default: [] },
+  isWin: { type: Boolean, default: false },
   createdAt: { type: Date, default: Date.now },
 });
 
